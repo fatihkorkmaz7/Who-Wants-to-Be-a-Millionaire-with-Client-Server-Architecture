@@ -38,9 +38,9 @@ Bu proje, klasik *Kim Milyoner Olmak İster?* yarışmasının temel kuralların
 
 
 joker_server.py (Joker Sunucusu)
-             ↓
+             ->
 program_server.py (Ana Oyun Sunucusu)
-             ↓
+             ->
 GUI.py (GUI) veya yarışmacı_client.py (Konsol)
 
 
