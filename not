@@ -1,0 +1,21 @@
+Bu kodlar, arka planda çalışan ve belirli portları (örneğin 4337 ve 4338) kullanan işlemleri
+tespit edip sonlandırmak için kullanılır. Yazılım geliştirme sürecinde, özellikle sunucu
+uygulamaları çalıştırılırken aynı portun hâlâ başka bir işlem tarafından kullanılıyor olması
+hata alınmasına neden olabilir. Bu durum genellikle uygulama kapatıldığında portun hemen serbest
+bırakılmaması ya da çökme gibi durumlar nedeniyle ortaya çıkar. Kodlar sayesinde bu tür port
+çakışmaları çözülür, işlem PİD’leri belirlenir ve gerekirse zorla kapatılarak portların
+yeniden kullanılabilir hâle gelmesi sağlanır.
+
+
+Bilgisayarda 4337 ve 4338 numaralı portları kullanan işlemleri listeler.
+netstat -aon | findstr :4337
+netstat -aon | findstr :4338
+
+
+4337 ve 4338 portunu kullanan işlemlerin PID’lerini bulur ve bu işlemleri zorla kapatır.
+for /f "tokens=5" %i in ('netstat -aon ^| findstr :4337') do taskkill /PID %i /F
+for /f "tokens=5" %i in ('netstat -aon ^| findstr :4338') do taskkill /PID %i /F
+
+Arka planda çalışmaya devam eden PID'leri manuel olarak kapatmayı sağlar.
+taskkill /PID 20168 /F
+taskkill /PID 15296 /F
