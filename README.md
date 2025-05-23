@@ -77,14 +77,13 @@ pip install pygame
 ## Program Dosya Yapısı
 
 
-.
-├── joker_server.py        # Joker mekanizması için ayrı sunucu
-├── program_server.py      # Ana oyun sunucusu
-├── GUI.py                 # Grafiksel kullanıcı arayüzü (Tkinter)
-├── yarışmacı_client.py    # Konsol tabanlı istemci
-├── correct1.mp3           # Doğru cevap sesi (GUI için)
-├── wrong1.mp3             # Yanlış cevap sesi (GUI için)
-└── README.md              # Bu dökümantasyon
+- joker_server.py: Joker mekanizması için ayrı sunucu  
+- program_server.py: Ana oyun sunucusu  
+- GUI.py: Grafiksel kullanıcı arayüzü (Tkinter)  
+- yarışmacı_client.py: Konsol tabanlı istemci  
+- correct1.mp3: Doğru cevap sesi (GUI için)  
+- wrong1.mp3: Yanlış cevap sesi (GUI için)  
+- README.md: Bu dökümantasyon  
 
 
 ---
